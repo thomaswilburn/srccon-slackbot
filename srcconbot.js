@@ -50,14 +50,14 @@ new CronJob('0 * * * * *', function() {
 var moment = require('moment-timezone');
 moment.tz.setDefault('America/Los_Angeles');
 
-var thursdayAM1 = moment('2016-07-25 22:30').tz('America/Los_Angeles'),
-    thursdayAM2 = moment('2016-07-25 22:31').tz('America/Los_Angeles'),
-    thursdayPM1 = moment('2016-07-25 22:32').tz('America/Los_Angeles'),
-    thursdayPM2 = moment('2016-07-28 16:00').tz('America/Los_Angeles'),
-    fridayAM1 = moment('2016-07-29 10:30').tz('America/Los_Angeles'),
-    fridayAM2 = moment('2016-07-29 12:00').tz('America/Los_Angeles'),
-    fridayPM1 = moment('2016-07-29 14:30').tz('America/Los_Angeles'),
-    fridayPM2 = moment('2016-07-29 16:00').tz('America/Los_Angeles');
+var thursdayAM1 = moment.tz('2016-07-25 22:35', 'America/Los_Angeles'),
+    thursdayAM2 = moment.tz('2016-07-25 22:36', 'America/Los_Angeles'),
+    thursdayPM1 = moment.tz('2016-07-25 22:37', 'America/Los_Angeles'),
+    thursdayPM2 = moment.tz('2016-07-28 16:00', 'America/Los_Angeles'),
+    fridayAM1 = moment.tz('2016-07-29 10:30', 'America/Los_Angeles'),
+    fridayAM2 = moment.tz('2016-07-29 12:00', 'America/Los_Angeles'),
+    fridayPM1 = moment.tz('2016-07-29 14:30', 'America/Los_Angeles'),
+    fridayPM2 = moment.tz('2016-07-29 16:00', 'America/Los_Angeles');
 
 var checkTimeMatch = function() {
     var now = moment(),
