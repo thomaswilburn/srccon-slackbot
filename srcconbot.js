@@ -50,9 +50,9 @@ new CronJob('0 * * * * *', function() {
 var moment = require('moment-timezone');
 moment.tz.setDefault('America/Los_Angeles');
 
-var thursdayAM1 = moment('2016-07-25 21:57'),
-    thursdayAM2 = moment('2016-07-25 21:58'),
-    thursdayPM1 = moment('2016-07-25 21:59'),
+var thursdayAM1 = moment('2016-07-25 22:01'),
+    thursdayAM2 = moment('2016-07-25 22:02'),
+    thursdayPM1 = moment('2016-07-25 22:03'),
     thursdayPM2 = moment('2016-07-28 16:00'),
     fridayAM1 = moment('2016-07-29 10:30'),
     fridayAM2 = moment('2016-07-29 12:00'),
