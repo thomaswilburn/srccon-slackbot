@@ -106,10 +106,10 @@ var sendAlert = function(timeblock, message) {
             var attachments = [{
                 'thumb_url': 'http://srccon.org/media/img/logo75.png',
                 'pretext': ':speech_balloon::tada: A SRCCON 2016 session with live transcription is about to start!',
-                'fallback': 'A SRCCON 2016 session with live transcription is about to start: ' + transcript['title'] + '. Open the live transcript at http://aloft.nu/srccon/2016-'+transcript['slug']+'.',
+                'fallback': 'A SRCCON 2016 session with live transcription is about to start: ' + transcript['title'] + '. Open the live transcript at http://srccon.aloft.nu/2016-'+transcript['slug']+'.',
                 'color': '#F79797',
                 'title': transcript['title'],
-                'title_link': 'http://aloft.nu/srccon/2016-'+transcript['slug'],
+                'title_link': 'http://srccon.aloft.nu/2016-'+transcript['slug'],
                 'text': transcript['description'],
                 'fields': [
                     {
@@ -118,7 +118,7 @@ var sendAlert = function(timeblock, message) {
                     },
                     {
                         'title': 'Transcript',
-                        'value': '<http://aloft.nu/srccon/2016-'+transcript['slug']+'|Open the live transcript>',
+                        'value': '<http://srccon.aloft.nu/2016-'+transcript['slug']+'|Open the live transcript>',
                         'short': true
                     },
                     {
