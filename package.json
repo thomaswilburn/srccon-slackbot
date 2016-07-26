@@ -1,0 +1,16 @@
+{
+  "name": "srcconslackbot",
+  "version": "0.0.1",
+  "description": "Slackbot alerts for SRCCON transcription sessions",
+  "main": "srcconbot.js",
+  "dependencies": {
+    "botkit": "^0.0.5",
+    "botkit-storage-redis": "1.0.1",
+    "cron": "1.1.0"
+  },
+  "scripts": {
+    "start": "node srcconbot.js"
+  },
+  "author": "Ryan Pitts",
+  "license": "MIT"
+}
