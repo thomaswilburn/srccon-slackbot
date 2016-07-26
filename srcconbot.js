@@ -92,6 +92,8 @@ var checkTimeMatch = function() {
             
     if (timeblock) {
         sendAlert(timeblock);
+    } else {
+        console.log('Checked at '+moment().format())
     }
 }
 
