@@ -94,8 +94,6 @@ var checkTimeMatch = function() {
         sendAlert(timeblock);
     } else {
         console.log('Checked at '+moment().format());
-        console.log(thursdayAM1.format());
-        console.log(now.isSame(thursdayAM1, 'minute'))
     }
 }
 
