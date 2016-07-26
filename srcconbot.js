@@ -50,9 +50,9 @@ new CronJob('0 * * * * *', function() {
 var moment = require('moment-timezone');
 moment.tz.setDefault('America/Los_Angeles');
 
-var thursdayAM1 = moment('2016-07-25 22:12'),
-    thursdayAM2 = moment('2016-07-25 22:13'),
-    thursdayPM1 = moment('2016-07-25 22:14'),
+var thursdayAM1 = moment('2016-07-25 22:20'),
+    thursdayAM2 = moment('2016-07-25 22:21'),
+    thursdayPM1 = moment('2016-07-25 22:22'),
     thursdayPM2 = moment('2016-07-28 16:00'),
     fridayAM1 = moment('2016-07-29 10:30'),
     fridayAM2 = moment('2016-07-29 12:00'),
@@ -93,7 +93,9 @@ var checkTimeMatch = function() {
     if (timeblock) {
         sendAlert(timeblock);
     } else {
-        console.log('Checked at '+moment().format())
+        console.log('Checked at '+moment().format());
+        console.log(thursdayAM1.format());
+        console.log(now.isSame(thursdayAM1, 'minute'))
     }
 }
 
