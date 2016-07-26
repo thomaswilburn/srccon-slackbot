@@ -1,1 +1,1 @@
-An experimental Slackbot that osts reminders into a Slack channel when SRCCON 2016 sessions with live transcripts are about to start. Built with Botkit.
+An experimental Slackbot that posts reminders into a Slack channel when SRCCON 2016 sessions with live transcripts are about to start. Built with [Botkit](https://github.com/howdyai/botkit).
