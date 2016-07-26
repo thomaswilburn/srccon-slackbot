@@ -23,7 +23,6 @@ if (!CLIENTID || !CLIENTSECRET || !PORT) {
 }
 
 if (process.env.REDISTOGO_URL) {
-    // TODO: redistogo connection
     var redisConfig = {
         'url': process.env.REDISTOGO_URL
     }
@@ -35,7 +34,7 @@ var redisStorage = require('botkit-storage-redis')(redisConfig);
 
 var controller = Botkit.slackbot({
     storage: redisStorage
-    //json_file_store: './db_slackbutton_incomingwebhook/',
+    //json_file_store: './db_slackbutton_incomingwebhook/'
 }).configureSlackApp({
     clientId: CLIENTID,
     clientSecret: CLIENTSECRET,
@@ -101,7 +100,6 @@ var sendAlert = function(timeblock, message) {
     if (message) {
         postToSlack(message)
     } else {
-        //console.log('Hello! There are some SRCCON sessions with live transcripts just getting ready to start:');
         transcripts[timeblock].forEach(function(transcript) {
             var attachments = [{
                 'thumb_url': 'http://srccon.org/media/img/logo75.png',
@@ -128,7 +126,6 @@ var sendAlert = function(timeblock, message) {
                     }
                 ]
             }]
-            //console.log(msg);
             postToSlack(false, attachments);
         });
     }
@@ -167,7 +164,7 @@ controller.setupWebserver(PORT,function(err,webserver) {
 
 controller.on('create_incoming_webhook',function(bot, webhook_config) {
     bot.sendWebhook({
-        text: ':thumbsup: SRCCON Transcript Alerts are ready to roll'
+        text: ':thumbsup: SRCCON Transcript Alerts are ready to roll! Each time a session with live transcription is about to begin, we\'ll post the title, description, and a link to the live transcript right here.'
     });
 })
 
